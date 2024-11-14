@@ -1,0 +1,20 @@
+{
+  "name": "anhtu_bc77_bt-javascript_buoi1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "flowbite": "^2.5.1"
+  }
+}

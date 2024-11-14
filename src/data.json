@@ -1,0 +1,101 @@
+[
+  {
+    "id": "1",
+    "name": "Apple iPhone 14 Pro",
+    "price": 1300,
+    "screen": "6.1 inch Super Retina XDR",
+    "backCamera": "Main 48 MP & Telephoto 12 MP, Ultra Wide 12 MP",
+    "frontCamera": "12 MP",
+    "img": "https://compasia.com.ph/cdn/shop/files/iphone-14-pro-711452.png?v=1717653209",
+    "desc": "A new Pro camera system and A16 Bionic chip.",
+    "type": "Apple"
+  },
+  {
+    "id": "2",
+    "name": "Samsung Galaxy S23 Ultra",
+    "price": 1200,
+    "screen": "6.8 inch Dynamic AMOLED 2X",
+    "backCamera": "Main 200 MP & Ultra Wide 12 MP, Telephoto 10 MP",
+    "frontCamera": "12 MP",
+    "img": "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-green-thumbnew-600x600.jpg",
+    "desc": "High-performance device with advanced camera features.",
+    "type": "Samsung"
+  },
+  {
+    "id": "3",
+    "name": "Xiaomi 13 Pro",
+    "price": 900,
+    "screen": "6.73 inch LTPO AMOLED",
+    "backCamera": "Main 50 MP & Telephoto 50 MP, Ultra Wide 50 MP",
+    "frontCamera": "32 MP",
+    "img": "https://didongmoi.com.vn/upload/images/product/dien-thoai-khac/xiaomi-13-pro-2.jpg",
+    "desc": "Premium performance with Leica-enhanced cameras.",
+    "type": "Xiaomi"
+  },
+  {
+    "id": "4",
+    "name": "OnePlus 11",
+    "price": 800,
+    "screen": "6.7 inch AMOLED",
+    "backCamera": "Main 50 MP & Telephoto 32 MP, Ultra Wide 48 MP",
+    "frontCamera": "16 MP",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/o/n/oneplus_11_-_green_-_rgb_1_1_1.jpg",
+    "desc": "Smooth performance with Hasselblad-tuned cameras.",
+    "type": "OnePlus"
+  },
+  {
+    "id": "5",
+    "name": "Google Pixel 7 Pro",
+    "price": 899,
+    "screen": "6.7 inch LTPO OLED",
+    "backCamera": "Main 50 MP & Telephoto 48 MP, Ultra Wide 12 MP",
+    "frontCamera": "10.8 MP",
+    "img": "https://sonpixel.vn/wp-content/uploads/2022/10/Google-Pixel-7-Pro.png",
+    "desc": "Exceptional AI capabilities with a stunning display.",
+    "type": "Google"
+  },
+  {
+    "id": "6",
+    "name": "Sony Xperia 1 IV",
+    "price": 1399,
+    "screen": "6.5 inch 4K HDR OLED",
+    "backCamera": "Triple 12 MP sensors with real-time tracking",
+    "frontCamera": "12 MP",
+    "img": "https://product.hstatic.net/1000370129/product/sony-xperia-1-iv-white-digiphone_2e4d7f92adad4b56b68c99668038e3bd.jpg",
+    "desc": "Impressive camera and display technology in a sleek design.",
+    "type": "Sony"
+  },
+  {
+    "id": "7",
+    "name": "Oppo Find X5 Pro",
+    "price": 1150,
+    "screen": "6.7 inch AMOLED LTPO",
+    "backCamera": "Main 50 MP & Ultra Wide 50 MP, Telephoto 13 MP",
+    "frontCamera": "32 MP",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/o/p/oppo-find-x5-pro-4.png",
+    "desc": "Premium design with a top-notch Hasselblad camera system.",
+    "type": "Oppo"
+  },
+  {
+    "id": "8",
+    "name": "Huawei P50 Pro",
+    "price": 1200,
+    "screen": "6.6 inch OLED",
+    "backCamera": "Main 50 MP & Telephoto 64 MP, Ultra Wide 13 MP, Monochrome 40 MP",
+    "frontCamera": "13 MP",
+    "img": "https://cdn.tgdd.vn/Products/Images/42/226196/huawei-p50-pro-600x600.jpg",
+    "desc": "Exceptional photography with a refined design.",
+    "type": "Huawei"
+  },
+  {
+    "id": "9",
+    "name": "Motorola Edge 30 Ultra",
+    "price": 850,
+    "screen": "6.67 inch OLED",
+    "backCamera": "Main 200 MP & Ultra Wide 50 MP, Depth 12 MP",
+    "frontCamera": "60 MP",
+    "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/d/v/dvfvffgh_1_.jpg",
+    "desc": "Flagship performance with an ultra-high-resolution camera.",
+    "type": "Motorola"
+  }
+]

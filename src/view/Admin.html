@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <section class="Navbar">
+      <header
+        class="bg-blue-500 p-4 text-white flex justify-between items-center"
+      >
+        <div class="title">
+          <a href="#">
+            <h1 class="text-4xl font-bold">Admin Shop</h1>
+          </a>
+        </div>
+        <div class="nav p-2 rounded w-1/3">
+          <div class="navbar text-center items-center mb-4">
+            <ul class="text-xl flex items-center justify-center">
+              <li class="w-1/3"><a href="./index.html">Home</a></li>
+              <li class="w-1/3"><a href="#">Admin</a></li>
+              <li class="w-1/3"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="search flex bg-white">
+            <input
+              type="text"
+              placeholder="Tìm kiếm điện thoại..."
+              class="p-2 rounded w-full"
+              id="TimKiem"
+            />
+            <button class="text-lg text-black px-4 hover:border">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="GioHang">
+          <button class="btnCart rounded-xl bg-slate-400 shadow-lg p-2">
+            <a
+              href="./cart.html"
+              class="text-white text-center font-semibold items-center"
+            >
+              <i class="fa fa-shopping-cart text-lg"></i>
+              <p>Giỏ hàng</p>
+            </a>
+          </button>
+        </div>
+      </header>
+    </section>
+    <!-- Header -->
+
+    <section class="Body">
+      <div class="container">
+        <div class="content bg-gray-100 font-sans antialiased">
+          <div class="flex min-h-screen">
+            <main class="flex-1 p-8">
+              <div class="bg-white shadow rounded-lg p-6">
+                <div class="top_list flex justify-between">
+                  <h2 class="text-xl font-semibold text-gray-700 mb-4">
+                    Danh sách sản phẩm
+                  </h2>
+                  <div class="TimTheoTen">
+                    <div class="container max-w-screen-2xl mx-auto">
+                      <div
+                        class="flex flex-col sm:flex-row gap-4 items-start mb-6"
+                      >
+                        <div class="w-full sm:w-48">
+                          <select
+                            id="type-select"
+                            class="w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                          >
+                            <option value="all" selected>Choose a Brand</option>
+                            <option value="Apple">Apple</option>
+                            <option value="Samsung">Samsung</option>
+                            <option value="LG">LG</option>
+                          </select>
+                        </div>
+
+                        <!-- Price Sort -->
+                        <div class="w-full sm:w-48">
+                          <select
+                            id="price-sort"
+                            class="w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                          >
+                            <option value="" selected>Sort Price</option>
+                            <option value="">Ascending</option>
+                            <option value="">Descending</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    id="btn_ThemSanPham"
+                    class="mb-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+                    onclick="show_AddProduct()"
+                  >
+                    Thêm sản phẩm
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+                <table class="w-full border-collapse">
+                  <thead>
+                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm">
+                      <th class="py-2 px-4 border">ID</th>
+                      <th class="py-2 px-4 border">Tên sản phẩm</th>
+                      <th class="py-2 px-4 border">Hình ảnh</th>
+                      <th class="py-2 px-4 border">Giá</th>
+                      <th class="py-2 px-4 border">Ghi chú</th>
+                      <th class="py-2 px-4 border">Hành động</th>
+                    </tr>
+                  </thead>
+                  <tbody id="product_table"></tbody>
+                </table>
+              </div>
+            </main>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div id="addSPModal" class="hidden">
+          <div
+            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+          >
+            <div class="bg-white w-96 p-6 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-semibold text-gray-700 mb-4">
+                Thêm sản phẩm mới
+              </h2>
+              <!-- Form nhập thông tin sản phẩm -->
+              <form id="addSP_Form">
+                <label class="block text-gray-700">ID sản phẩm:</label>
+                <input
+                  type="text"
+                  id="IdSP"
+                  class="w-full px-3 py-2 border rounded mb-4"
+                  placeholder="ID sẽ được tạo tự động"
+                  readonly
+                />
+                <label class="block text-gray-700">Tên sản phẩm:</label>
+                <input
+                  type="text"
+                  id="NameSP"
+                  class="w-full px-3 py-2 border rounded mb-4"
+                  required
+                />
+                <div class="flex items-center">
+                  <label class="block text-gray-700 m-1">Giá:</label>
+                  <input
+                    type="number"
+                    id="PriceSP"
+                    class="w-full px-3 py-2 border rounded mb-4"
+                    required
+                  />
+                  <label class="block text-gray-700 m-1">Branch:</label>
+                  <input
+                    type="text"
+                    id="Type"
+                    class="w-full px-3 py-2 border rounded mb-4"
+                    required
+                  />
+                </div>
+                <label class="block text-gray-700">Hình ảnh :</label>
+                <input
+                  type="text"
+                  id="imgSP"
+                  class="w-full px-3 py-2 border rounded mb-4"
+                  required
+                />
+
+                <div class="Camera">
+                  <h3>Thông số kỹ thuật Camera:</h3>
+                  <div class="TT_camera flex items-center">
+                    <label class="block text-gray-700">Trước:</label>
+                    <input
+                      type="text"
+                      id="BackCamera"
+                      class="w-full px-3 py-2 border rounded mb-4"
+                      required
+                    />
+                    <label class="block text-gray-700">Sau:</label>
+                    <input
+                      type="text"
+                      id="FrontCamera"
+                      class="w-full px-3 py-2 border rounded mb-4"
+                      required
+                    />
+                  </div>
+                </div>
+                <label class="block text-gray-700">Thông số màn hình:</label>
+                <input
+                  type="text"
+                  id="Screen"
+                  class="w-full px-3 py-2 border rounded mb-4"
+                  required
+                />
+                <label class="block text-gray-700">Ghi chú:</label>
+                <input
+                  type="text"
+                  id="node"
+                  class="w-full px-3 py-2 border rounded mb-4"
+                  required
+                />
+                <div class="flex justify-end space-x-2">
+                  <button
+                    type="button"
+                    onclick="closeFormAdd()"
+                    class="px-4 py-2 bg-gray-300 rounded"
+                    id="btn_Huy"
+                  >
+                    Hủy
+                  </button>
+                  <button
+                    type="button"
+                    onclick="btn_addProduct()"
+                    class="px-4 py-2 bg-blue-500 text-white rounded"
+                    id="btn_Them"
+                  >
+                    Thêm
+                  </button>
+                  <button
+                    type="button"
+                    onclick="btn_Update()"
+                    class="px-4 py-2 bg-yellow-500 text-white rounded"
+                    id="btn_CapNhat"
+                  >
+                    Cập nhật
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+      integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Script -->
+    <!-- <script src="../app/services/productServices.js"></script> -->
+    <script type="module" src="../controller/Admin.js"></script>
+  </body>
+</html>

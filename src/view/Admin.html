@@ -157,6 +157,7 @@
                 />
                 <div class="flex items-center">
                   <label class="block text-gray-700 m-1">Giá:</label>
+                 
                   <input
                     type="number"
                     id="PriceSP"
@@ -171,6 +172,9 @@
                     required
                   />
                 </div>
+                <small id="price-error" class="text-red-500 hidden">
+                  Product price must be a positive integer!
+                </small>
                 <label class="block text-gray-700">Hình ảnh :</label>
                 <input
                   type="text"
@@ -231,12 +235,13 @@
                   </button>
                   <button
                     type="button"
-                    onclick="btn_Update()"
+               
                     class="px-4 py-2 bg-yellow-500 text-white rounded"
                     id="btn_CapNhat"
                   >
                     Cập nhật
                   </button>
+                  
                 </div>
               </form>
             </div>

@@ -1,5 +1,6 @@
 {
   "name": "anhtu_bc77_bt-javascript_buoi1",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

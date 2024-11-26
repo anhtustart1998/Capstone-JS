@@ -1,0 +1,3 @@
+Task Management Sheet Link: https://docs.google.com/spreadsheets/d/1icc6yAfLkeaBpU9OSpOoOzY2HTXb6ozTEwXbLWP5xJo
+Deployment Link: https://jscapstone-theta.vercel.app/index.html
+Github Repo: https://github.com/anhtustart1998/Capstone-JS

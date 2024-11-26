@@ -23,6 +23,14 @@
       "dest": "/src/$1"
     },
     {
+      "src": "/cart",
+      "dest": "/src/view/cart.html"
+    },
+    {
+      "src": "/admin",
+      "dest": "/src/view/Admin.html"
+    },
+    {
       "handle": "filesystem"
     },
     {

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+    "start": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "build": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --minify",
+    "vercel-build": "npm run build"
   },
   "keywords": [],
   "author": "",
